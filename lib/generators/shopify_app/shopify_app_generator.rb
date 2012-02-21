@@ -33,7 +33,7 @@ class ShopifyAppGenerator < Rails::Generators::Base
   end
 
   def add_bootstrap_gem
-    insert_into_file "Gemfile", "\ngem 'less-rails-bootstrap'\n\n", :before => '# Gems used only for assets and not required'
+    insert_into_file "Gemfile", "\ngem 'less-rails-bootstrap', '~> 2.0.4'\n\n", :before => '# Gems used only for assets and not required'
   end
   
   def add_routes
