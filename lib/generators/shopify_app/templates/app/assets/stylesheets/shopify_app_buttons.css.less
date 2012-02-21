@@ -58,7 +58,8 @@
   .border-radius(4px);
 }
 
-.btn [class^="icon-"] { 
+.btn [class^="icon-"] {
+  opacity:.6;
   margin-top:2px;
 }
 
@@ -84,7 +85,7 @@
   line-height: @baseLineHeight - 2px;
 }
 .btn-small [class^="icon-"] {
-  margin-top: -1px;
+  margin-top: 1px;
 }
 
 // Mini
@@ -167,4 +168,13 @@
 .btn.btn-danger:before,
 .btn.btn-inverse:before { 
   border: 1px solid rgba(255,255,255,.2);
+}
+
+.btn.btn-primary [class^="icon-"],
+.btn.btn-info [class^="icon-"],
+.btn.btn-success [class^="icon-"],
+.btn.btn-warning [class^="icon-"],
+.btn.btn-danger [class^="icon-"],
+.btn.btn-inverse [class^="icon-"] {
+  opacity:1;
 }
