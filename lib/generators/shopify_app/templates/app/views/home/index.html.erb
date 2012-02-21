@@ -142,7 +142,7 @@
                 <% if product.published_at != nil %>
                 <p class="muted">Published at <%= Time.parse(product.published_at).strftime("%H:%M on %m/%d/%Y") %></p>
                 <% end %>
-                <p><%= link_to raw('View in your Shopify Admin <i class="icon-chevron-right" style="opacity:.25"></i>'), "https://#{current_shop.url}/admin/products/#{product.id}", :target => 'blank', :class => 'btn btn-primary' %></p>
+                <p><%= link_to raw('View in your Shopify Admin <i class="icon-chevron-right icon-white"></i>'), "https://#{current_shop.url}/admin/products/#{product.id}", :target => 'blank', :class => 'btn btn-primary' %></p>
               </div>
               
             </div>
