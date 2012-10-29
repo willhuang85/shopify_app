@@ -10,10 +10,11 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   
   <!-- icons -->
-  <link rel="shortcut icon" href="../assets/favicon.png">
-  <link rel="apple-touch-icon" href="../assets/shopify-57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../assets/shopify-72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../assets/shopify-114.png">
+  <%= favicon_link_tag 'shopify-144.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+  <%= favicon_link_tag 'shopify-114.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+  <%= favicon_link_tag 'shopify-72.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+  <%= favicon_link_tag 'shopify-57.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+  <%= favicon_link_tag 'favicon.png', :rel => 'shortcut icon' %>
   
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>

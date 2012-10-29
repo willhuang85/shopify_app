@@ -1,21 +1,41 @@
-<div class="page-header" id="login-header">
-  <h1>Install This App</h1>
-  <h1><small>This app requires you to login to start using it.</small></h1>
+<header class="jumbotron">
+  <div class="inner">
+    <div class="container">
+      <h1 class="p20">This is the main tagline about your App</h1>
+      <p class="lead p0">
+        A secondary statement on the functionality of your app and why it's awesome.
+      </p>
+    </div><!-- /container -->
+  </div>
+</header>
+
+
+<div class="row p30" id="app-login">
+  <div class="span6">
+    <div class="well p0">
+    <h3><small>Log in to Shopify</small></h3>
+    <p>This app requires a Shopify account to log in or install.</p>
+    <%= form_tag '/login/authenticate', :class => 'form-search p10' do %>
+      <%= text_field_tag 'shop', nil, :placeholder => 'Shop URL', :class => 'input-xlarge' %>
+      <%= submit_tag 'Log in', :class => 'btn btn-primary btn-large' %>
+    <% end %>
+    </div>
+  </div>
+  
+  <div class="span6">
+    <div class="well p0">
+      <h3><small>New to Shopify?</small></h3>
+      <p>Easily set up and run your own online store with Shopify.</p>
+      <p class="p10"><a class="btn btn-large" href="http://www.shopify.com/">Take the Feature Tour</a></p>
+    </div>
+  </div>
 </div>
 
-<div style="width:340px; margin:0 auto;">
-  <%= form_tag login_path, :class => 'form-search' do %>
-    <%= text_field_tag 'shop', nil, :placeholder => 'Shop URL', :class => 'btn-large' %>
-    <%= submit_tag 'Install', :class => 'btn btn-primary btn-large' %>
-  <% end %>
+
+<div class="row p20">
+  <div class="span12" id="app-features">
+    <h2 class="muted">• &nbsp;This section you can put three points on why people need this app.</h2>
+    <h2 class="muted">• &nbsp;They should be clear and concise. Don't blab on!</h2>
+    <h2 class="muted">• &nbsp;You'll be able to use these three points in the app store later.</h2>
+  </div>
 </div>
-
-<p align="center" style="margin-top:30px">
-  <%= image_tag 'shopify.png' %>
-</p>
-
-<br/>
-
-<p align="center" class="muted">
-  Don't have a shop? <a href="https://app.shopify.com/services/partners/api_clients/test_shops">Create a Test Shop</a>
-</p>

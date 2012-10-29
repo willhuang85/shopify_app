@@ -1,40 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>500 Error: Something went horribly wrong</title>
+  <title>500 Error: Something went horribly wrong. :(</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   
   <style>
-  .container { text-align:center;}
-  .navbar .brand { float:none;}
+    body, html { margin:0; padding:0; background: #eee url('/assets/eee.png') repeat !important; font-family:sans-serif; color:#333;}
+    
+    h1,h2,h3,h4,h5,h6,.brand { margin:0; padding:0; font-family: 'Open Sans'; font-weight:200;}
+    h1,h2 { letter-spacing:-1px; font-weight:200;}
+    h2 { font-size:26px;}
+    a { color: #7BA139; text-decoration:none !important;}
+    p { margin-bottom:22px; line-height:22px;}
+    
+    .p0 { margin-bottom: 0!important; }
+    .p5 { margin-bottom: 5px!important; }
+    .p10 { margin-bottom: 10px!important; }
+    .p15 { margin-bottom: 15px!important; }
+    .p20 { margin-bottom: 20px!important; }
+    .p25 { margin-bottom: 25px!important; }
+    .p30 { margin-bottom: 30px!important; }
+    .p35 { margin-bottom: 35px!important; }
+    .p40 { margin-bottom: 40px!important; }
+    .p50 { margin-bottom: 50px!important; }
+    .p60 { margin-bottom: 60px!important; }
+    .p70 { margin-bottom: 70px!important; }
+    .p80 { margin-bottom: 80px!important; }
+    
+    .navbar {
+      background: #1C1C1C;
+      display:block;
+      height:68px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+    }
+    .brand { color: #eee; background:url('/assets/logo.png') center 15px no-repeat; display:block; height:68px;}
+    
+    .container { text-align:center;}
+        
+    .jumbotron { height:100%; width:100%; display:block; position: absolute; background: #7BA139;}
+    .jumbotron .inner { height:100%; width:100%; display:block; background: transparent url('/assets/dust.png') top center; -webkit-box-shadow: inset 0 -20px 300px rgba(0,0,0,.2); -moz-box-shadow: inset 0 -20px 300px rgba(0,0,0,.2);}
+    .jumbotron h1 { padding-top:200px; font-size: 54px; text-shadow: 0 1px 2px rgba(0, 0, 0, .3); color:#fff; letter-spacing:-3px;}
+    .jumbotron h1, .jumbotron p { text-align: center; text-shadow: 0 1px 1px rgba(0, 0, 0, .3);}
+    .lead { font-family: 'Open Sans'; color:#ebf4cc;}
+    
+    .btn {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+      background-color: #97B746;
+      background-image: -moz-linear-gradient(top, #AAC54F, #7BA139);
+      background-image: -ms-linear-gradient(top, #AAC54F, #7BA139);
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AAC54F), to(#7BA139));
+      background-image: -webkit-linear-gradient(top, #AAC54F, #7BA139);
+      background-image: -o-linear-gradient(top, #AAC54F, #7BA139);
+      background-image: linear-gradient(top, #AAC54F, #7BA139);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aac54f', endColorstr='#7ba139', GradientType=0);
+      border-color: #7BA139 #7BA139 #506925;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+      color: #fff;
+      padding: 9px 14px;
+      font-size: 15px;
+      line-height: normal;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    
+    .btn:hover {
+      background-color: #7BA139;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      background-position: 0 -15px;
+      -webkit-transition: background-position 0.1s linear;
+      -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+      -o-transition: background-position 0.1s linear;
+      transition: background-position 0.1s linear;
+    }
+    .btn:active {
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
+    }
   </style>
 </head>
 
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a href="/" class="brand">Shopify Demo App</a>
-      </div>
+  <div class="navbar">
+    <div class="container">
+      <a href="/" class="brand"></a>
     </div>
   </div>
   
+  
   <div class="container">
+    
     <div class="content">
-      
-      <div class="page-header">        
-        <h1>AH! 500 Error!</h1>
-      </div>
-      
-      <h3><i class="icon-warning-sign" style="margin-top:6px; opacity:.5;"></i> We're sorry, but something went wrong.</h3>
-      <p class="muted">The developer of this app has been notified.</p>
-      
-      <p><button type="button" value ="back" onClick="window.history.back();" class='btn btn-primary'><i class="icon-chevron-left" style="opacity:.25"></i> Back to the app</button></p>
-      
+      <header class="jumbotron">
+        <div class="inner">
+          <div class="container">      
+            <h1 class="p0">This app is currently down! &nbsp;:-(</h1>
+            <p class="lead p80">Something horrible has happened.</p>
+            <p><button type="button" value="back" onClick="window.history.back();" class='btn'>Back to the app</button></p>
+            
+          </div>
+        </div>
+      </header>
+
     </div>
     
-    <footer>
-      <p>A Shopify app by (company name here)</p>
-    </footer>
   </div> <!-- /container -->
 </body>
 </html>
+
+
